@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 24,
         fontWeight: '600',
-        color: "white",
+        color: "Black",
         textAlign: "center"
     },
     plushicon: {

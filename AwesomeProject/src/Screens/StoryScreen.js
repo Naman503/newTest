@@ -12,6 +12,8 @@ export default function StoryScreen() {
   const closeActivityIndicator = () => {
     setTimeout(() => {
       setAnimate(false);
+      navigation.navigate('NoStory');
+
     }, 5000);
   };
     return (
