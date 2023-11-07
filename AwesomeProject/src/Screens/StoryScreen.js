@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 export default function StoryScreen() {
     const navigation = useNavigation()
     const [animate, setAnimate] = useState(true);
-    const [bar, setBar] = useState(0.1);
+    const [bar, setBar] = useState(0.01);
 
   useEffect(() => {
     closeActivityIndicator();
