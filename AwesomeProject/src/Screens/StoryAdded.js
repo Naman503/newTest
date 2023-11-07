@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 24,
         fontWeight: '600',
-        color: "#fff",
+        color: "black",
         textAlign: "center"
     },
     modal:{

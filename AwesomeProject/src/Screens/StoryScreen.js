@@ -4,10 +4,17 @@ import { useNavigation } from '@react-navigation/native'
 export default function StoryScreen() {
     const navigation = useNavigation()
     const [animate, setAnimate] = useState(true);
+    const [bar, setBar] = useState(0.1);
 
   useEffect(() => {
     closeActivityIndicator();
   }, []);
+
+  
+  if(animate == true){
+   let myInter = setInterval(function () {setBar(bar+0.2)}, 1000);
+
+  }
 
   const closeActivityIndicator = () => {
     setTimeout(() => {
@@ -22,8 +29,8 @@ export default function StoryScreen() {
         
         
             <View style={styles.header} >
-                {/* <ProgressBarAndroid styleAttr="Horizontal" progress={0.5} indeterminate={true} color="#2196F3" /> */}
-                <ActivityIndicator animating={animate} size="large" color="#fff" />
+                <ProgressBarAndroid styleAttr="Horizontal" progress={bar} indeterminate={false} color="#2196F3" />
+                {/* <ActivityIndicator animating={animate} size="large" color="#fff" /> */}
             </View>
             <View style={styles.storyImageContainer}>
                 <Image style={{ height: '100%', width: "100%", overflow: 'hidden' }} source={require('../Assets/isro.jpeg')} />
